@@ -14,14 +14,14 @@ const initial = (() => {
 
 const useAuth = create((set, get) => ({
   ...initial,
-  login: ({ token, role, user }) => {
-    const state = { token, role, user, lastActive: Date.now() };
+  login: ({ token, role, user, adminLevel, jurisdiction }) => {
+    const state = { token, role, user, adminLevel, jurisdiction, lastActive: Date.now() };
     localStorage.setItem(persistKey, JSON.stringify(state));
     set(state);
   },
   logout: () => {
     localStorage.removeItem(persistKey);
-    set({ token: null, role: null, user: null });
+    set({ token: null, role: null, user: null, adminLevel: null, jurisdiction: null });
   },
   touch: () => {
     const s = { ...get(), lastActive: Date.now() };

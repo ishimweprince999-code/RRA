@@ -61,10 +61,10 @@ export default function LoginPage() {
                   ? "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg"
                   : "bg-slate-700/30 text-slate-400 hover:bg-slate-700/50"
               }`} 
-              onClick={()=>setMode("admin")}
+              onClick={()=>window.location.href="/admin/login"}
             >
               <Shield size={18} />
-              Admin
+              Admin Portal
             </button>
           </div>
 

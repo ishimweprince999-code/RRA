@@ -12,6 +12,7 @@ export default function AdminLayout() {
       <Sidebar
         items={[
           { to: "/admin/dashboard", label: "Dashboard" },
+          { to: "/admin/hierarchy", label: "Admin Hierarchy" },
           { to: "/admin/traders", label: "Traders" },
           { to: "/admin/taxes", label: "Taxes Overview" },
           { to: "/admin/analytics", label: "Analytics" },

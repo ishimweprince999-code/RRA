@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { LayoutDashboard, Plus, FileText, BarChart3, Users, DollarSign, TrendingUp, ChevronLeft, ChevronRight, User, LogOut, Menu, X } from "lucide-react";
+import { LayoutDashboard, Plus, FileText, BarChart3, Users, DollarSign, TrendingUp, ChevronLeft, ChevronRight, User, LogOut, Menu, X, Shield, MapPin } from "lucide-react";
 import useAuth from "../store/auth.js";
 
 const iconMap = {
@@ -11,6 +11,8 @@ const iconMap = {
   "Traders": Users,
   "Taxes Overview": DollarSign,
   "Analytics": TrendingUp,
+  "Admin Hierarchy": Shield,
+  "Hierarchy": MapPin,
 };
 
 export default function Sidebar({ items = [], mobileOpen = false, setMobileOpen }) {

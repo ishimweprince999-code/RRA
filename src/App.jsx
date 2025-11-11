@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Landing from './pages/Landing.jsx'
 import LoginPage from './pages/Auth/LoginPage.jsx'
+import AdminLoginPage from './pages/Admin/LoginPage.jsx'
 import RegisterPage from './pages/Auth/RegisterPage.jsx'
 import TraderLayout from './layouts/TraderLayout.jsx'
 import AdminLayout from './layouts/AdminLayout.jsx'
@@ -9,6 +10,7 @@ import NewSale from './pages/Trader/NewSale.jsx'
 import Transactions from './pages/Trader/Transactions.jsx'
 import Reports from './pages/Trader/Reports.jsx'
 import AdminDashboard from './pages/Admin/Dashboard.jsx'
+import AdminHierarchyManagement from './pages/Admin/AdminHierarchyManagement.jsx'
 import TradersList from './pages/Admin/TradersList.jsx'
 import TaxesOverview from './pages/Admin/TaxesOverview.jsx'
 import Analytics from './pages/Admin/Analytics.jsx'
@@ -28,6 +30,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/admin/login" element={<AdminLoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
 
       <Route element={<ProtectedRoute allowedRoles={["trader"]} />}>
@@ -47,6 +50,7 @@ export default function App() {
         <Route element={<AdminLayout />}>
           <Route path="/admin" element={<Navigate to="/admin/dashboard" replace />} />
           <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route path="/admin/hierarchy" element={<AdminHierarchyManagement />} />
           <Route path="/admin/traders" element={<TradersList />} />
           <Route path="/admin/taxes" element={<TaxesOverview />} />
           <Route path="/admin/analytics" element={<Analytics />} />
